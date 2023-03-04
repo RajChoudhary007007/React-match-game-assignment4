@@ -260,7 +260,7 @@ class App extends Component {
     clickedCardList: [],
     isGameInProgress: true,
     timer: 60,
-    score: 0,
+    score: '0',
   }
 
   componentDidMount() {
@@ -314,7 +314,7 @@ class App extends Component {
         <img
           className="Active-image-container"
           src={mainImageUrl}
-          alt="category"
+          alt="match"
         />
       </>
     )
@@ -366,7 +366,7 @@ class App extends Component {
     )
   }
 
-  onReset = () => {
+  onClickReset = () => {
     this.startTimer()
     this.setState({isGameInProgress: true})
     this.setState({timer: 60})
@@ -388,7 +388,11 @@ class App extends Component {
             />
             <p className="score-description">YOUR SCORE</p>
             <p className="score-description">{clickedCardList.length}</p>
-            <button className="button" type="button" onClick={this.onReset}>
+            <button
+              className="button"
+              type="button"
+              onClick={this.onClickReset}
+            >
               <img
                 src="https://assets.ccbp.in/frontend/react-js/match-game-play-again-img.png "
                 alt="reset"

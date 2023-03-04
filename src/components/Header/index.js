@@ -11,14 +11,14 @@ const Header = props => {
         alt="website logo"
       />
       <div className="timer-container">
-        <p className="card-length">score:{score}</p>
+        <p className="card-length">Score: {score}</p>
         <img
           className="timer"
           src="https://assets.ccbp.in/frontend/react-js/match-game-timer-img.png "
           alt="timer"
         />
         <p className="card-length">
-          {timer} <span className="spam-text">Sec</span>
+          {timer} <span className="spam-text">sec</span>
         </p>
       </div>
     </div>
